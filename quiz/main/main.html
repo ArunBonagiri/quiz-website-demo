@@ -1,0 +1,63 @@
+<?php
+  session_set_cookie_params(0);
+?>
+<html>
+<head>
+ <script type="text/javascript">
+  function activateTab(pageId)
+  {
+          var tabCtrl = document.getElementById('tabCtrl');
+          var pageToActivate = document.getElementById(pageId);
+          for (var i = 0; i < tabCtrl.childNodes.length; i++) 
+          {
+              var node = tabCtrl.childNodes[i];
+              if (node.nodeType == 1) 
+              { 
+                  node.style.display = (node == pageToActivate) ? 'block' : 'none';
+              }
+          }
+      }
+
+    </script>
+</head>
+<body style="background-color:#FFFFF2">
+  <center>
+ <form>
+ <h1 style="color:#98AFC7">Quiz.com</h1>
+ <table>
+ <tr>
+  <td><li><a href="javascript:activateTab('page1')"> Home </a></li> </td>
+  <td><li><a href="javascript:activateTab('page2')"> Results </a></li></td>
+  <td><li><a href="javascript:activateTab('page3')"> Profile </a></li></td>
+  <td><li><a href="javascript:activateTab('page4')"> About </a></li></td>
+ </tr>
+ </table>
+ <div id="tabCtrl">
+      <div id="page1" style="display: block;">
+        <br></br>
+        <h2>Select one quiz here ..</h2>
+        <table>
+         <tr>
+         <td>
+         <li><a href="http://localhost/quiz/quiz-data/quiz-1.php"> quiz 1 </a></li>
+         <li><a href="http://localhost/quiz/quiz-data/quiz-2.php"> quiz 2 </a></li>
+         <li><a href="http://localhost/quiz/quiz-data/quiz-3.php"> quiz 3 </a></li> 
+         <li><a href="http://localhost/quiz/quiz-data/quiz-4.php"> quiz 4 </a></li>
+         </td>
+         </tr>
+         </table>      
+        </div>
+      <div id="page2" style="display: none;"><br></br><h2>results are</h2></div>
+      <div id="page3" style="display: none;"><br></br>
+       <h2>your profile</h2>
+       <table>
+       <tr>
+       <td> 
+       <br><h3><a href = 'http://localhost/quiz/main/index.html'>logout</a> </h3></center>      
+       </td></tr></table></div>
+       <div id="page4" style="display: none;"><br></br><h2>about of this site is to improve the knowledge of the people</h2></div>
+    </div>
+</form>
+</center>
+</body>
+</html>
