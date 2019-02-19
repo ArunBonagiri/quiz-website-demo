@@ -3,8 +3,8 @@
 include("quiz-2.php");
 if(!empty($_POST['input_name']))
 {
-  $answear = unserialize($_POST['input_name']);
-  //echo "answear is".$answear." ";
+  $answer = unserialize($_POST['input_name']);
+  //echo "answer is".$answer." ";
 }
 else { }
 if(isset($_POST['submit']))
@@ -16,14 +16,14 @@ if(isset($_POST['submit']))
 
   foreach($_POST['checkans'] as $selected)
   {
-        if($selected == $answear)
+        if($selected == $answer)
         { 
-             //echo "<br></br>Previous answear is correct  " .$selected. " " ;  
+             //echo "<br></br>Previous answer is correct  " .$selected. " " ;  
              $_SESSION['score'] = $_SESSION['score'] + 1;
         }
         
-    }   
-    // header("Location:http://localhost/quiz/quiz-data/quiz-2.php"); 
+  }   
+  header("Location:http://localhost/quiz/quiz-data/quiz-2.php"); 
 
    
  }

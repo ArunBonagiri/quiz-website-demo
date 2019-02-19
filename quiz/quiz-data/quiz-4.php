@@ -47,10 +47,10 @@
        
          <?php
        
-            if($row['answear'])
+            if($row['answer'])
             {
               
-                $answer = $row['answear'];            
+                $answer = $row['answer'];            
        
             }         
           ?>
